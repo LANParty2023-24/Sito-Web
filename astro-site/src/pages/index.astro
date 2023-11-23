@@ -1,8 +1,13 @@
 ---
+import Menu from "../components/Menu.astro";
+import Timer from "../components/Timer.astro";
+import Card from "../components/Card.astro";
 
+const text = 
+`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula dolor non justo ornare suscipit. Nunc aliquet turpis sed posuere ultrices. Vivamus lorem sapien, viverra eget ullamcorper sed, efficitur eu ipsum. Donec eleifend dolor et elit lacinia, in facilisis ipsum euismod. Aliquam erat volutpat. Proin accumsan tempus tristique. Aliquam pretium eros et est sagittis congue. Nam pulvinar sem id leo mollis, vulputate porttitor augue hendrerit. Etiam vulputate neque sed posuere tempus. Donec dapibus augue quis nisl aliquet ultricies. Nulla finibus augue ac ultrices porttitor.`
 ---
 
-<html lang="en">
+<html lang="it">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -11,6 +16,25 @@
 		<title>Astro</title>
 	</head>
 	<body>
+		<Menu />
+		<Timer />
 		<h1>Astro</h1>
+
+		<Card articleName="Hola" imgPath="/favicon.svg" paragraphText={text}></Card>
+		<style>
+  		@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+			*{
+				font-family: 'Roboto', sans-serif;
+			}
+			body {
+				background-color: tan;
+				
+			}
+			@media screen and (max-width: 992px) {
+				body {
+					background-color: olive;
+				}
+			}
+		</style>
 	</body>
 </html>
