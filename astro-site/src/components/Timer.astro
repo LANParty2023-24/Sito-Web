@@ -1,0 +1,32 @@
+<div id="timer"></div>
+
+<script>
+    const eventDate = new Date('23 May, 2024 22:15');
+
+    function countDown(callback){
+        //aggiorno prima perchè altrimenti non mostra nulla
+        let timeLeft=eventDate.getTime()-((new Date()).getTime());
+        callback(msToTime(timeLeft));
+
+        setInterval(()=>{
+            //continuo ad aggiornare
+            timeLeft=eventDate.getTime()-((new Date()).getTime());
+            callback(msToTime(timeLeft));
+        }, 1000);
+    }
+
+    function saveTimeLeft(timeLeft){
+        document.getElementById("timer").innerHTML=timeLeft;
+    }
+
+    function msToTime(ms) {
+        let days = Math.floor(ms / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((ms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((ms % (1000 * 60)) / 1000);
+
+        return days + "d " + hours + "h "  + minutes + "m " + seconds + "s ";
+    }
+
+    countDown(saveTimeLeft);
+</script>
