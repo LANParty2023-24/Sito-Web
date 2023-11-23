@@ -1,0 +1,33 @@
+---
+const {articleName, imgPath, paragraphText} = Astro.props;
+---
+
+<article>
+    <img src={imgPath} alt="">
+    <div>
+        <h3>{articleName}</h3>
+        <p>{paragraphText}</p>
+    </div>
+</article>
+
+<style>
+    article{
+        display: flex;
+        width: 80%;
+    }
+    
+    article > *{
+        width: 50%;
+    }
+
+    @media screen and (max-width: 992px) {
+		article {
+			flex-direction: column;
+		}
+
+        article > *{
+        width: 100%;
+    }
+
+	}
+</style>
