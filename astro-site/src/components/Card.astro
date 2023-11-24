@@ -14,6 +14,7 @@ const {articleName, imgPath, paragraphText} = Astro.props;
     article{
         display: flex;
         width: 80%;
+        
     }
     
     article > *{
@@ -26,8 +27,13 @@ const {articleName, imgPath, paragraphText} = Astro.props;
 		}
 
         article > *{
-        width: 100%;
-    }
+            width: 100%;
+        }
+
+        img{
+            align-self: center;/*centrato per flex col*/
+            max-width: 450px;
+        }
 
 	}
 </style>
