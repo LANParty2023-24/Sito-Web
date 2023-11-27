@@ -1,0 +1,7 @@
+*::selection{
+    color: #debeff;
+    background-color: #5c469ccb;
+}
+img::selection{
+    background-color: transparent;
+}

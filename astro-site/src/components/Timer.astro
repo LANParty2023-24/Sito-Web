@@ -1,0 +1,97 @@
+<div id="timer">
+    <span>
+        <div class="time"></div>
+        <div class="unit">DAYS</div>
+    </span>
+
+    <span>
+        <div class="time"></div>
+        <div class="unit">HOURS</div>
+    </span>
+    
+    <span>
+        <div class="time"></div>
+        <div class="unit">MINUTES</div>
+    </span>
+
+    <span>
+        <div class="time"></div>
+        <div class="unit">SECONDS</div>
+    </span>
+</div>
+
+<script>
+    const eventDate = new Date('23 May, 2024 22:15');
+
+    function countDown(callback){
+        //aggiorno prima perchè altrimenti non mostra nulla
+        let timeLeft=eventDate.getTime()-((new Date()).getTime());
+        callback(msToTime(timeLeft));
+
+        setInterval(()=>{
+            //continuo ad aggiornare
+            timeLeft=eventDate.getTime()-((new Date()).getTime());
+            callback(msToTime(timeLeft));
+        }, 1000);
+    }
+
+    function saveTimeLeft(timeLeft){
+        const time = timeLeft.split(":");
+        const times = document.getElementsByClassName("time");
+
+        for(let i=0; i<time.length; i++){
+           times[i].innerHTML=(time[i].length==1 ? "0" : "")+time[i];
+        }
+    }
+
+    function msToTime(ms) {
+        let days = Math.floor(ms / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((ms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((ms % (1000 * 60)) / 1000);
+
+        return days + ":" + hours + ":"  + minutes + ":" + seconds;
+    }
+
+    countDown(saveTimeLeft);
+</script>
+<style>
+    #timer{
+        display: flex;
+        gap: 30px;
+
+        font-weight: bold;
+        background-color: white;
+        border-radius: 10px;
+        padding:10px;
+    }
+
+    #timer *::selection{
+        color: black;
+        background-color: transparent;
+    }
+
+    .time{
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    .unit{
+        font-size: medium;
+        text-align: center;
+    }
+    @media screen and (max-width: 992px) {
+		#timer{
+            width: fit-content;
+        }
+        .time{
+        font-size: 1.1em;
+        text-align: center;
+        }
+
+        .unit{
+            font-size: 0.7em;
+            text-align: center;
+        }
+	}
+</style>
