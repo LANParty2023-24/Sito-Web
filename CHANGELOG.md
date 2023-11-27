@@ -6,10 +6,16 @@
 
 ### Added
 
-- Useful workspace extension (for VSCode users)
+- Useful workspace extension and settings (for VSCode users)
 - `App/`, `Server/` and `Database/` folders
 - `README.md` file (still empty)
 - `CHANGELOG.md` file (duh)
+
+### Changed
+
+> After merge with previous initial work
+
+- Renamed folder `astro-app` to `App`
 
 <!-- ### Added for new features.
 ### Changed for changes in existing functionality.
@@ -20,6 +26,6 @@
 
 ## [Released]
 
-[unreleased]: https://github.com/LANParty2023-24/Sito-Web
-[Released]: https://github.com/LANParty2023-24/Sito-Web
+[unreleased]: https://github.com/LANParty2023-24/Sito-Web/
+[Released]: https://github.com/LANParty2023-24/Sito-Web/
 [0.0.0#1]: https://github.com/LANParty2023-24/Sito-Web/
