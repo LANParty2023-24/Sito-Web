@@ -1,0 +1,18 @@
+{
+    "recommendations": [
+        "ctc.vscode-tree-extension",
+        "humao.rest-client",
+        "christian-kohler.npm-intellisense",
+        "leizongmin.node-module-intellisense",
+        "chris-noring.node-snippets",
+        "bierner.markdown-preview-github-styles",
+        "xabikos.javascriptsnippets",
+        "zignd.html-css-class-completion",
+        "wix.vscode-import-cost",
+        "ecmel.vscode-html-css",
+        "expresssnippets.vscode-express-snippets",
+        "pranaygp.vscode-css-peek",
+        "dzhavat.css-flexbox-cheatsheet",
+        "astro-build.astro-vscode"
+    ]
+}
