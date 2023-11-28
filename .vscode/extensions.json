@@ -13,6 +13,11 @@
         "expresssnippets.vscode-express-snippets",
         "pranaygp.vscode-css-peek",
         "dzhavat.css-flexbox-cheatsheet",
-        "astro-build.astro-vscode"
+        "astro-build.astro-vscode",
+        "kamikillerto.vscode-colorize",
+        "adpyke.codesnap",
+        "aaron-bond.better-comments",
+        "usernamehw.errorlens",
+        "visualstudioexptteam.intellicode-api-usage-examples"
     ]
 }
