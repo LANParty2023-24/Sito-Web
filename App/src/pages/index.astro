@@ -1,6 +1,8 @@
 ---
-import Timer from "../components/Timer.astro";
-import Card from "../components/Card.astro";
+import "../styles/common.css";
+import Section from '../layouts/Section.astro';
+import Timer from '../components/Timer.astro';
+import Card from '../components/Card.astro';
 import MainLayout from "../layouts/MainLayout.astro";
 
 const text = 
@@ -13,26 +15,30 @@ const text =
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Lan Party | Home</title>
 	</head>
 	<body>
-		<MainLayout header="Astro">
-			<Timer/>
-			<Card articleName="Hola" imgPath="/favicon.svg" paragraphText={text}></Card>
+		<MainLayout header="">
+			<Section bg_color="rgb(140,120,150)">
+				<h1>LAN Party</h1>
+				<p>2023-2024</p>
+			</Section>
+	
+			<Section bg_color="lightgray">
+				<Timer/>
+			</Section>
+	
+			<Section>
+				<Card articleName="Lorem Ipsum" paragraphText=`${text}`/>
+			</Section>
 		</MainLayout>
 
 		<style>
-			body{
-				padding:0;
-				margin:0;
-				width: 100%;
-				height: 100vh;
+			.test{/*class handy for testing*/
+				background-color: aqua;
+				border: solid black 3px;
 			}
-			@media screen and (max-width: 992px) {
-				body{
-					height: unset;
-				}
-			}
+			@media screen and (max-width: 992px) {}
 		</style>
 	</body>
 </html>
