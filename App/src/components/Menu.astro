@@ -1,9 +1,9 @@
 <ion-icon name="menu-outline"></ion-icon>
 <ul class="invisible">
+    <li><a href="/index.html">LAN Party</a></li>
     <li><a href="">QUANDO GIOCO?</a></li>
-    <li><a href="">VOTA I GIOCHI</a></li>
     <li><a href="">CHI SIAMO?</a></li>
-    <li><a href="">FEEDBACK</a></li>
+    <li><a href="">VOTA I GIOCHI</a></li>
 </ul>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -31,22 +31,19 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     *{
         font-family: 'Roboto', sans-serif;
-        margin:0;
-        padding:0;
     }
     ul{
-        background-color: white;
-        width: 500px;
-        
+        position: fixed;
         list-style-type: none;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
 
         display: flex;
-        gap: 15px;
-        height: 50px;
         align-items: center;
         justify-content: center;
+        gap: 15px;
+
+        background-color: white;
+        width: 100%;
+        height: 50px;
     }
     ul *::selection{
         color: black;
@@ -70,15 +67,14 @@
 
     @media screen and (max-width: 992px) {
 		ul{
-            flex-direction: column;
+            position: fixed;
+
             width: 200px;
             height: 100vh;
-            position: absolute;
-            align-self: baseline;
 
+            flex-direction: column;
             justify-content: flex-start;
             gap:35px;
-            text-align: left;
         }
 
         ul > li:first-child{
@@ -86,15 +82,17 @@
         }
 
         ul>li{
-          width: 100%;  
+          width: 100%;
+          margin-left: 50px; 
           text-align: left;
-          margin-left: 50px;
         }
         ion-icon{
-            z-index: 1;
+            position: fixed;
+            
             display: block;
+            z-index: 1;
+            
             font-size: 30px;
-            align-self: baseline;
             margin: 20px 0 0 20px;
         }
 
