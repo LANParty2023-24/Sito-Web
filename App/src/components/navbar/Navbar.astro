@@ -1,0 +1,94 @@
+---
+import IconLink from "./IconLink.astro";
+
+
+---
+
+<nav>
+	<h1>Lan Party 2023-24</h1>
+
+	<div class="spacer"></div>
+
+	<div class="page-links-wrapper">
+		<a href="#">About Us</a>
+		<a href="#">Project</a>
+		<a href="#">More Stuff</a>
+	</div>
+
+	<!-- <div class="spacer"></div> -->
+
+	<div class="quick-links-wrapper">
+		<IconLink destination_url="" icon_url="" icon_alt="" /> <!-- Marconi -->
+		<IconLink destination_url="" icon_url="" icon_alt="" /> <!-- Github -->
+		<IconLink destination_url="" icon_url="" icon_alt="" /> <!-- altro -->
+	</div>
+</nav>
+
+<style>
+	nav {
+		/* remember to remove the padding pixels */
+		width: calc(100% - 30px);
+		height: 60px;
+
+		padding: 5px 15px;
+
+		background-color: var(--bg-body-tertiary);
+
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	nav > h1 {
+		white-space: nowrap;
+
+		margin: 0 10px;
+		padding: 0;
+	}
+	
+	nav > div.spacer {
+		flex-basis: 100%;
+	}
+
+	nav > div.page-links-wrapper {
+		margin: 0 50px 0 0;
+
+		font-size: 20px;
+		text-decoration: underline;
+		white-space: nowrap;
+
+		/* outline: 1px solid red; */
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+	}
+
+	nav > div.page-links-wrapper > a:link,
+	nav > div.page-links-wrapper > a:visited {
+		color: var(--fg-text-secondary);
+	}
+
+	nav > div.page-links-wrapper > a:hover {
+
+		/* TODO: add a tertiary color or a brighter
+		 * version for hovered selection of a secondary text*/
+		/* color: var(--fg-text-secondary-hover); */
+		
+		color: hsl(214, 20%, 65%);
+	}
+
+	nav > div.page-links-wrapper > a:active { /* clicked link */
+		color: var(--fg-text-primary);
+	}
+
+	nav > div.quick-links-wrapper {
+		/* outline: 1px solid red; */
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+	}
+</style>
