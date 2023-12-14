@@ -1,51 +1,26 @@
 :root {
-    /* ? ===== MATERIALS ===== */
-    --_material-thin:    0.6;
-    --_material-thick:   0.8;
-    --_material-regular: 1.0;
+	/* ? COLORS */
 
-    /* ? ===== FOREGROUND ===== */
-    --_fg-primary:   255, 255, 255;
-    --_fg-secondary: 255, 255, 255;
-    --_fg-tertiary:  255, 255, 255;
+	/* foreground */
+	--fg-primary:		rgb(255, 255, 255);
+	--fg-secondary:		rgb(120, 138, 163);
 
-    /* ? ===== BACKGROUND ===== */
-    --_bg-body-primary:     255, 255, 255;
-    --_bg-body-secondary:   255, 255, 255;
-    --_bg-body-tertiary:    255, 255, 255;
-    --_bg-body-quaternary:  255, 255, 255;
+	--fg-text-primary:		rgb(217, 217, 217);
+	--fg-text-secondary:	rgb(130, 140, 153);
 
+	/* background */
+	--bg-body-primary:		rgb(51, 45, 45);
+	--bg-body-secondary:	rgb(64, 56, 58);
+	--bg-body-tertiary: 	rgb(77, 68, 70);
 
-
-    /* ? ===== FOREGROUND MATERIALS ===== */
-    --fg-primary-thin:    rgba(var(--_fg-primary), var(--_material-thin)); 
-    --fg-primary-thick:   rgba(var(--_fg-primary), var(--_material-thick)); 
-    --fg-primary:         rgba(var(--_fg-primary), var(--_material-regular)); 
-
-    --fg-secondary-thin:  rgba(var(--_fg-secondary), var(--_material-thin)); 
-    --fg-secondary-thick: rgba(var(--_fg-secondary), var(--_material-thick)); 
-    --fg-secondary:       rgba(var(--_fg-secondary), var(--_material-regular)); 
-
-    --fg-tertiary-thin:   rgba(var(--_fg-tertiary), var(--_material-thin)); 
-    --fg-tertiary-thick:  rgba(var(--_fg-tertiary), var(--_material-thick)); 
-    --fg-tertiary:        rgba(var(--_fg-tertiary), var(--_material-regular)); 
+	/* tint */
+	--_tint-primary:		rgb(252, 254, 189);
 
 
+	/* ? MATERIALS */
 
-    /* ? ===== BACKGROUND MATERIALS ===== */
-    --bg-body-primary-thin:    rgba(var(--_bg-body-primary), var(--_material-thin)); 
-    --bg-body-primary-thick:   rgba(var(--_bg-body-primary), var(--_material-thick)); 
-    --bg-body-primary:         rgba(var(--_bg-body-primary), var(--_material-regular)); 
-
-    --bg-body-secondary-thin:  rgba(var(--_bg-body-secondary), var(--_material-thin)); 
-    --bg-body-secondary-thick: rgba(var(--_bg-body-secondary), var(--_material-thick)); 
-    --bg-body-secondary:       rgba(var(--_bg-body-secondary), var(--_material-regular)); 
-
-    --bg-body-tertiary-thin:   rgba(var(--_bg-body-tertiary), var(--_material-thin)); 
-    --bg-body-tertiary-thick:  rgba(var(--_bg-body-tertiary), var(--_material-thick)); 
-    --bg-body-tertiary:        rgba(var(--_bg-body-tertiary), var(--_material-regular)); 
-
-    --bg-body-quaternary-thin:   rgba(var(--_bg-body-quaternary), var(--_material-thin)); 
-    --bg-body-quaternary-thick:  rgba(var(--_bg-body-quaternary), var(--_material-thick)); 
-    --bg-body-quaternary:        rgba(var(--_bg-body-quaternary), var(--_material-regular)); 
+	/* opacities */
+	--_material-thin: 0.2;
+	--_material-thick: 0.6;
+	--_material-regular: 1.0;
 }

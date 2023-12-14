@@ -1,8 +1,10 @@
-
 {
     "explorer.fileNesting.patterns": {
         "Dockerfile": ".dockerignore",
         "README.md": "changelog.md, CREDITS*, LICENSE*, .gitignore",
         "astro.config*": "tsconfig.json, package.json, package-lock.json"
     },
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false,
+	"editor.detectIndentation": false
 }
