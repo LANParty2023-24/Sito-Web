@@ -1,7 +1,6 @@
 {
     "recommendations": [
-        "ctc.vscode-tree-extension",
-        "humao.rest-client",
+		"humao.rest-client",
         "christian-kohler.npm-intellisense",
         "leizongmin.node-module-intellisense",
         "chris-noring.node-snippets",

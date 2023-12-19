@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "start-host": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
+    "preview-host": "astro preview --host",
     "astro": "astro"
   },
   "dependencies": {
