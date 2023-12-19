@@ -1,3 +1,16 @@
+/* TODO
+ : - Change pixel measurements to make use of rem
+ : - Set max text width < 45ch (for readability)
+ */
+
+:root {
+	/* As a reminder that rem units are multiples of the root font-size */
+	/* font-size: 16px; */
+
+    font-family: sans-serif;
+    font-weight: medium;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -19,18 +32,12 @@ body{
 	background-color: var(--bg-body-primary);
 }
 
-
-* {
-    font-family: sans-serif;
-    font-weight: medium;
-}
-
 *::selection {
-	/* TODO Find suitable colors for the palette
-	 color: var(--fg-text-selected);
-	 background-color: var(--bg-selected); */
+	/* TODO Find suitable colors for the palette */
+	/* color: var(--fg-text-selected); */
+	/* background-color: var(--bg-selected); */
 
-	 /* temporary*/
+	/* temporary*/
 	color: var(--fg-text-secondary);
 	background-color: var(--bg-body-secondary);
 

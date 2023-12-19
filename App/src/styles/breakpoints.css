@@ -1,0 +1,20 @@
+/* Of course you can't set a media query with a variable, silly me  */
+:root {
+	--small-screen: 37.5rem;	/* 600px */
+	--medium-screen: 50rem;		/* 800px */
+	--large-screen: 80rem;		/* 1280px */
+}
+
+/* RECOMENDED USAGE */
+
+/* tablet */
+/* @media screen and (min-width: var(--small-screen)) { } */
+/* @media screen and (min-width: 37.5rem) { } */
+
+/* desktop */
+/* @media screen and (max-width: var(--medium-screen)) { } */
+/* @media screen and (max-width: 50rem) { } */
+
+/* ultra wide */
+/* @media screen and (min-width: var(--large-screen)) { } */
+/* @media screen and (min-width: 80rem) { } */

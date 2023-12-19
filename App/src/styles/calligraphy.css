@@ -1,0 +1,27 @@
+:root {
+	--text-heading-large: 1.5rem;	/* ~105px */
+	--text-heading: 1.14rem;		/* ~80px */
+	--text-primary: 1rem;			/*  70px */
+	--text-secondary: 0.57rem;		/* ~40px */
+}
+
+/* .text-heading {
+	font-size: var(--text-heading);
+	font-weight: bold;
+
+	color: var(--fg-text-primary);
+}
+
+.text-primary{
+	font-size: var(--text-primary);
+	font-weight: medium;
+
+	color: var(--fg-text-primary);
+}
+
+.text-secondary{
+	font-size: var(--text-secondary);
+	font-weight: lighter;
+
+	color: var(--fg-text-secondary);
+} */
