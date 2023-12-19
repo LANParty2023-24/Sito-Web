@@ -9,7 +9,7 @@ import IconLink from "./IconLink.astro";
 
 	<div class="spacer"></div>
 
-	<div class="page-links-wrapper">
+	<div class="page-links-wrapper inline-page-links-wrapper">
 		<a href="#">About Us</a>
 		<a href="#">Project</a>
 		<a href="#">More Stuff</a>
@@ -24,14 +24,21 @@ import IconLink from "./IconLink.astro";
 	</div>
 </nav>
 
+<div class="page-links-wrapper floating-page-links-wrapper">
+	<a href="#">About Us</a>
+	<a href="#">Project</a>
+	<a href="#">More Stuff</a>
+</div>
+
 <style>
 	nav {
 		/* remember to remove the padding pixels */
-		width: calc(100% - 30px);
-		height: 60px;
+		width: calc(100% - 2em);
+		/* height: 60px; */
 
-		padding: 5px 15px;
+		padding: 0.6em 1em;
 
+		font-size: var(--text-heading);
 		background-color: var(--bg-body-tertiary);
 
 		display: flex;
@@ -42,36 +49,41 @@ import IconLink from "./IconLink.astro";
 	nav > h1 {
 		white-space: nowrap;
 
-		margin: 0 10px;
+		margin: 0;
 		padding: 0;
 	}
 	
 	nav > div.spacer {
-		flex-basis: 100%;
+		display: none;
 	}
 
-	nav > div.page-links-wrapper {
+	@media screen and (min-width: 37.5rem) {
+		nav > div.spacer {
+			flex-basis: 100%;
+			display: block;
+		}
+	}
+
+	div.page-links-wrapper {
 		margin: 0 50px 0 0;
 
-		font-size: 20px;
+		/* font-size: 20px; */
 		text-decoration: underline;
 		white-space: nowrap;
 
 		/* outline: 1px solid red; */
 
 		display: flex;
-		justify-content: center;
 		align-items: center;
 		gap: 10px;
 	}
 
-	nav > div.page-links-wrapper > a:link,
-	nav > div.page-links-wrapper > a:visited {
+	div.page-links-wrapper > a:link,
+	div.page-links-wrapper > a:visited {
 		color: var(--fg-text-secondary);
 	}
 
-	nav > div.page-links-wrapper > a:hover {
-
+	div.page-links-wrapper > a:hover {
 		/* TODO: add a tertiary color or a brighter
 		 * version for hovered selection of a secondary text*/
 		/* color: var(--fg-text-secondary-hover); */
@@ -79,8 +91,38 @@ import IconLink from "./IconLink.astro";
 		color: hsl(214, 20%, 65%);
 	}
 
-	nav > div.page-links-wrapper > a:active { /* clicked link */
+	div.page-links-wrapper > a:active { /* clicked link */
 		color: var(--fg-text-primary);
+	}
+
+	nav > div.inline-page-links-wrapper {
+		display: none;
+	}
+
+	div.floating-page-links-wrapper {
+		width: 100%;
+
+		font-size: 1.5rem;
+		padding: 0.5em 0;
+
+		position: fixed;
+		bottom: 0;
+		left: 0;
+
+		background-color: var(--bg-body-tertiary);
+
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	@media screen and (min-width: 37.5rem) {
+		nav > div.inline-page-links-wrapper {
+			display: flex;
+		}
+
+		div.floating-page-links-wrapper {
+			display: none;
+		}
 	}
 
 	nav > div.quick-links-wrapper {
@@ -88,7 +130,15 @@ import IconLink from "./IconLink.astro";
 
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-end;
+		flex-basis: 100%;
 		gap: 10px;
 	}
+
+	@media screen and (min-width: 37.5rem) {
+		nav > div.quick-links-wrapper {
+			flex-basis: 0;
+		}
+	}
+
 </style>
