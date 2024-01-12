@@ -40,7 +40,7 @@
         const times = document.getElementsByClassName("time");
 
         for(let i=0; i<time.length; i++){
-           times[i].innerHTML=(time[i].length==1 ? "0" : "")+time[i];
+            times[i].innerHTML=(time[i].length==1 ? "0" : "")+time[i];
         }
     }
 
@@ -56,42 +56,70 @@
     countDown(saveTimeLeft);
 </script>
 <style>
-    #timer{
-        display: flex;
-        gap: 30px;
+    #timer {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
 
-        font-weight: bold;
-        background-color: white;
-        border-radius: 10px;
-        padding:10px;
+.time {
+    font-size: 2.7em;
+    text-align: center;
+    background-color: #FF6B6B;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 35px;
+    animation: scaleUp 0.8s ease-in-out infinite alternate, colorChange 5s infinite linear;
+}
+
+.unit {
+    margin-top: 8px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #ffffff;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #ec4f54;
+    }
+    25% {
+        background-color: #d6ff66;
+    }
+    50% {
+        background-color: #06D6A0;
+    }
+    75% {
+        background-color: #118AB2;
+    }
+    100% {
+        background-color: #73197b;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .time {
+        font-size: 1.7em;
+        padding: 8px 16px;
     }
 
-    #timer *::selection{
-        color: black;
-        background-color: transparent;
+    .unit {
+        font-size: 1.8em;
     }
+}
 
-    .time{
-        font-size: xx-large;
-        text-align: center;
-    }
-
-    .unit{
-        font-size: medium;
-        text-align: center;
-    }
-    @media screen and (max-width: 992px) {
-		#timer{
-            width: fit-content;
-        }
-        .time{
-        font-size: 1.1em;
-        text-align: center;
-        }
-
-        .unit{
-            font-size: 0.7em;
-            text-align: center;
-        }
-	}
 </style>
